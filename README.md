@@ -1,6 +1,16 @@
 # Personal-Portfolio-Webpage
 
+Company: CODTECH IT SOLUTIONS
 
+NAME : ABHISHEK SURYAVANSHI
+
+INTERN ID : CT04WC87
+
+DOMAIN : FRONTEND DEVELOPMENT
+
+DURATION : 4 WEEKS
+
+MENTOR: NEELA SANTOSH
 
 Personal Portfolio Webpage
 Introduction
