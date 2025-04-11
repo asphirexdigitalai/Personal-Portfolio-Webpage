@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Suryawanshi - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #000;
+            color: white;
+            text-align: center;
+        }
+
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #000;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+        }
+
+        nav h1 span {
+            color: #f80202;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #4acfee;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-content h1 {
+            font-size: 50px;
+        }
+
+        .hero-content h1 span {
+            color: #4acfee;
+        }
+
+        .hero-content h2 {
+            font-size: 24px;
+            color: #f90b1b;
+            margin-top: 10px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .btn {
+            background: #4acfee;
+            color: #000;
+            padding: 12px 24px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #3aadd9;
+        }
+
+        /* About Me Section */
+        #about {
+            background: #000;
+            padding: 100px 10%;
+            text-align: left;
+        }
+
+        .about-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 15px #4acfee;
+        }
+
+        #about h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #about p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        #about h3 {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #4acfee;
+        }
+
+        #about ul {
+            list-style: none;
+            margin-top: 10px;
+            padding-left: 0;
+        }
+
+        #about ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Skills Section */
+        #skills {
+            background: #000;
+            padding: 100px 10%;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .skill {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 20px;
+            box-shadow: 0 0 10px #4acfee;
+        }
+
+        /* Projects Section */
+        #projects {
+            background: #000;
+            padding: 100px 10%;
+        }
+
+        .projects-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .project {
+            width: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            box-shadow: 0 0 15px #4acfee;
+            transition: transform 0.3s;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer with Social Icons */
+        footer {
+            background: #000;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #4acfee;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h1>My<span>Portfolio</span></h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Hi, I'm <span>Abhishek Suryawanshi</span></h1>
+            <h2>AIML Engineer || Full Stack Developer</h2>
+            <p>"Transforming ideas into intelligent solutions—AI, ML & Full-Stack Development"</p>
+            <div class="buttons">
+                <a href="#contact" class="btn">Hire Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <p>
+                I am <strong>Abhishek Suryawanshi</strong>, a passionate AI and ML Engineering student and Full Stack Developer. 
+                I specialize in transforming ideas into intelligent and scalable solutions using cutting-edge technologies.
+            </p>
+            <h3>Academic Journey</h3>
+            <ul>
+                <li><strong>10th Grade:</strong> 71% SSC</li>
+                <li><strong>12th Grade:</strong> 51.17% (Science, PCM)</li>
+                <li><strong>FY B.Tech:</strong> Pursuing AI & ML Engineering at DYP-ATU</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">C Programming</div>
+            <div class="skill">Bootstrap</div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+<section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects-container">
+        <div class="project">
+            <img src="c:\Users\abhijeet\Pictures\time.jpg.jpeg" alt="Time Table" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
+            <h3>Collage Time Table</h3>
+            <p>Collage Time Table Create Using Html Language</p>
+        </div>
+        <div class="project">
+            <img src="c:\Users\abhijeet\Pictures\port.jpg.jpeg" alt="Portfolio page" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
+            <h3>Portfolio page</h3>
+            <p>Using a Html & Css create a portfolio Webpage</p>
+        </div>
+        <div class="project">
+            <img src="c:\Users\abhijeet\Pictures\quiz app.jpg.jpeg" alt="Quiz App" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
+            <h3>Quiz App</h3>
+            <p>Html Css And Java Script using the Language for devlop quiz application</p>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer with Social Links -->
+    <footer id="contact">
+        <p>Connect with me on</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/abhishek-suryawanshi-649b01337?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="LinkedIn"><i
+                    class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/asphirexdigitalai" target="_blank" title="GitHub"><i
+                    class="fab fa-github"></i></a>
+            <a href="https://wa.me/qr/IOFQMQ4TASEHC1" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/abhisuryawanshi_96k?igsh=MXJ2djZ5bWx1M3FmNg==" target="_blank" title="Instagram"><i
+                    class="fab fa-instagram"></i></a>
+            <a href="https://x.com/Abhyaa1610?t=Iug0trSDmBxKwGLln-rONA&s=09" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
